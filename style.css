@@ -25,10 +25,10 @@ nav a:hover,nav a.active{color:var(--gold);border-color:var(--gold)}
 /* Seven animated chakra overlays aligned to the seven chakra centers in the hero artwork. */
 /* Individual animated chakra overlays: each chakra rotates continuously while the glow pulses. */
 .chakra-system{position:absolute;inset:0;z-index:4;pointer-events:none}
-.chakra{position:absolute;width:4.15%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);isolation:isolate;filter:drop-shadow(0 0 9px var(--chakra)) drop-shadow(0 0 22px color-mix(in srgb,var(--chakra) 55%,transparent));animation:chakraPulse 2.6s ease-in-out infinite}
-.chakra::before{content:"";position:absolute;inset:4%;border:2px solid var(--chakra);border-radius:50%;box-shadow:0 0 9px var(--chakra),inset 0 0 10px var(--chakra);animation:chakraSpin 7s linear infinite}
-.chakra::after{content:"";position:absolute;inset:17%;border:1px dashed var(--chakra);border-radius:50%;opacity:.95;animation:chakraSpin 4.5s linear infinite reverse}
-.chakra span{position:absolute;inset:31%;border-radius:50%;background:radial-gradient(circle,#fff 0 16%,var(--chakra) 24% 45%,transparent 47%);box-shadow:0 0 12px 4px var(--chakra);animation:chakraCore 1.7s ease-in-out infinite}
+.chakra{position:absolute;width:4.15%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);isolation:isolate;filter:drop-shadow(0 0 9px var(--chakra)) drop-shadow(0 0 22px color-mix(in srgb,var(--chakra) 55%,transparent));animation:none}
+.chakra::before{content:"";position:absolute;inset:4%;border:2px solid var(--chakra);border-radius:50%;box-shadow:0 0 9px var(--chakra),inset 0 0 10px var(--chakra);animation:none}
+.chakra::after{content:"";position:absolute;inset:17%;border:1px dashed var(--chakra);border-radius:50%;opacity:.95;animation:none}
+.chakra span{position:absolute;inset:31%;border-radius:50%;background:radial-gradient(circle,#fff 0 16%,var(--chakra) 24% 45%,transparent 47%);box-shadow:0 0 12px 4px var(--chakra);animation:none}
 .chakra-7{left:62.15%;top:10.8%}.chakra-6{left:62.15%;top:20.2%}.chakra-5{left:62.15%;top:36.5%}.chakra-4{left:62.15%;top:48.1%}.chakra-3{left:62.15%;top:59.5%}.chakra-2{left:62.15%;top:71.1%}.chakra-1{left:62.15%;top:82.9%}
 @keyframes chakraSpin{to{transform:rotate(360deg)}}
 @keyframes chakraCore{0%,100%{transform:scale(.82);opacity:.78}50%{transform:scale(1.18);opacity:1}}
@@ -284,4 +284,13 @@ nav a:hover,nav a.active{color:var(--gold);border-color:var(--gold)}
   .wa-float b {
     font-size: 14px;
   }
+}
+
+/* REMOVE ALL CHAKRA OVERLAY CIRCLES */
+.chakra-system,
+.chakra,
+.chakra::before,
+.chakra::after,
+.chakra span {
+    display: none !important;
 }
